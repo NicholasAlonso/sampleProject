@@ -78,9 +78,11 @@ var ServiceSearch = (function() {
 		displayMap(40.79899700000001, -74.4814291);//Show markers
 	    function addressSearch() {
 	    	var $myAddress = $("#myAddress");
-			getLongLat($myAddress.val());
-			$(".errorMessage, .sr_flex").removeClass('show');			
-			$myAddress.val("");
+	    	if($myAddress.val()) {
+	    		getLongLat($myAddress.val());
+	    		$myAddress.val("");
+	    		$(".errorMessage, .sr_flex").removeClass('show');
+	    	}
 	    }
 	    $("#serviceSearch").click(addressSearch);
 		$(document).keypress(function(event) {
