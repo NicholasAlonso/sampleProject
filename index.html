@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+<title>Public Services</title>
+<link href="https://fonts.googleapis.com/css?family=Quicksand" rel="stylesheet">
+<link rel="stylesheet" type="text/css" href="styles.css">
+</head>
+  
+<body>
+<div id="sr_container">
+  <div class="sr_header">
+  	<h1 class="sr_h1">Service Request Search</h1>
+    <p id="noLocation" class="errorMessage">Address not found</p>
+    <p id="noRequests" class="errorMessage">No requests at this location</p>
+    <div class="sr_flex">
+    	<input class="sr_searchInput" id="myAddress" type="text" name="address" placeholder="Enter your address"/>
+      <button id="serviceSearch" class="sr_searchBTN">search</button>
+    </div>
+  </div>
+
+	<div id="serviceContainer"><div id="map"></div></div>
+</div>
+<script
+  src="https://code.jquery.com/jquery-3.2.1.min.js"
+  integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+  crossorigin="anonymous"></script>
+<script src="scripts.js" defer></script>
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBYxAF0kSK_KwfhMIX2oWwLPmnfHLQbiYg"
+    async defer></script>
+</body>
+</html>
